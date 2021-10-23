@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Mi primera pagina</title>
+    </head>
+ 
+	<table width="000" bgcolor=ffff align=center>
+	<tr>
+	    <td>
+            
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Comisiones Venta de Empleados</h1>
+        <p th:text="${msg}"></p>
+        <br/>
+        
+        <table border="1">
+            <tr>
+                <th>Nombres</th>
+                <th>Enero</th>
+                <th>Febrero</th>
+                <th>Marzo</th>
+            </tr>
+            <!-- vamos a poner la lineas hacemos iteracion -->
+            <tr th:each="persona : ${personas}">
+                <td th:text="${persona.nombreVendedor}" ></td>
+                <td th:text="${persona.Ventaenero}" ></td>
+                <td th:text="${persona.Ventafebrero}" ></td>
+                <td th:text="${persona.Ventamarzo}" ></td>
+            </tr>
+        </table>
+        
+        
+    </body>
+</html>
+
